@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-size: 1.8rem;
+}
+
+.header{
+    width: 100%;
+    height: 10vh;
+    background-color: #34495e;
+    /* position: fixed; */
+    top: 0;
+    z-index: 2;
+}
+
+.mobile-nav{
+    display: none;
+}
+
+.navbar-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.navbar-container .logo h1{
+    font-size: 45px;
+}
+.navbar-container h1{
+    color:rgb(22 205 59);
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.navbar-container ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-container ul a{
+    font-size: 25px;
+    padding: 1.5rem;
+    color: white;
+    transition: all 0.4s ease;
+}
+
+.navbar-container ul a:hover{
+    color:dodgerblue;
+    text-decoration: underline;
+}
+
+.active-link{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.navbar-container .menu-icon{
+    color: white;
+    display: none;
+}
+
+@media(max-width:990px){
+    .navbar-container ul{
+        display: none;
+    }
+
+    .navbar-container .menu-icon{
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .mobile-nav{
+        /* display: block; */
+        position: absolute;
+        width: 100%;
+        height: 12rem;
+        background-color: rgb(219, 221, 225);
+    }
+
+    .mobile-nav ul a{
+        display: inline-block;
+        padding: 0.2rem;
+        font-size: 1.3rem;
+        color: #5b5963;
+        width: 100%;
+        text-align: center;
+        transition: all 0.4s ease;
+    }
+
+    .mobile-nav ul a:hover{
+        color: dodgerblue;
+        text-decoration: underline;
+    }
+
+    .mobile-nav.show{
+        display: block;
+    }
+}
